@@ -38,7 +38,7 @@ function solution2(s) {
     return str.join(' ');
 }
 function solution(s) {
-    return s.split(' ').map(v => Array.from(v.toUpperCase()).map((c, k) => k % 2 ? c.toLowerCase() : c).join('')).join(' ')
+    return s.toUpperCase().split(' ').map(v => Array.from(v).map((c, k) => k % 2 ? c.toLowerCase() : c).join('')).join(' ')
 }
 
 console.log(solution('t1r2y'))
