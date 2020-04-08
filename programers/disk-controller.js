@@ -7,7 +7,7 @@ function solution(array) {
     const list = jobs.filter(([item]) => item <= i).sort(([,a], [,b]) => a - b);
     if (!list.length) { i = jobs[0][0]; continue; }
 
-    const [ arrive, take, index = jobs.indexOf(list[0]) ] = list[0]
+    const [ arrive, take, index = jobs.indexOf(list[0]) ] = list[0];
     i += take;
     answer += i - arrive;
     jobs.splice(index, 1)
