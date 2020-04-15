@@ -1,12 +1,9 @@
 function solution(A) {
   const len = A.length;
-  A.sort((a,b) => a -b);
+  A.sort((a,b) => a - b);
   for(let i = 0 ; i < len; ) {
-    if (A[i] === A[i+1]) {
-      i+=2
-    } else {
-      return A[i];
-    }
+    if (A[i] === A[i+1]) i+=2;
+    else return A[i];
   }
 }
 console.time("calculatingTime")
